@@ -1,7 +1,7 @@
 from src import init
 
 if __name__ == '__main__':
-    init('Bienvenido')
+    init("\n\nBienvenido \n")
 
 """
 Clase y Objeto

@@ -3,3 +3,5 @@ class TaskModel:
     title = ''
     description = ''
     user_name = ''
+    date = ''
+    date_modified = ''
