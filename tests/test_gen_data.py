@@ -13,7 +13,7 @@ def test_gen_uuid(expected_value):
 
 
 date_value_params = {
-    '2021-10-29'
+    '2021-10-29 01:02:03'
 }
 
 

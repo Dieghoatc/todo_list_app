@@ -41,4 +41,30 @@ def input_info(text):
 
 
 def alert(text):
+    print("-----------------------------")
     print(text)
+    print("-----------------------------")
+
+
+def print_all_task(value):
+    fields = ["Titulo", "Descripción", "Usuario", "Fecha de creación", "Ultima Actualización"]
+
+    for clave in value.items():
+        print("_________________________________\n")
+        print("Id: ", clave[0])
+        for list_fields, list_details in zip(fields, clave[1]):
+            print(list_fields, ": ", list_details)
+
+        print("_________________________________\n")
+
+
+
+
+
+
+
+
+
+
+
+

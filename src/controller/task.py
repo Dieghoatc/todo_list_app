@@ -45,3 +45,8 @@ class Update:
 class Delete:
     def del_self(self):
         del (db[self.uid])
+
+
+class GetAll:
+    def get_all(self):
+        return db

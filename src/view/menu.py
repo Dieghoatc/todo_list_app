@@ -7,7 +7,8 @@ def menu():
     print("2: Read Task")
     print("3: Update Task")
     print("4: Delete Task")
-    print("5: Exit")
+    print("5: Get all Task")
+    print("6: Exit")
     print("----------------Ingrese un numero --------------")
 
 
