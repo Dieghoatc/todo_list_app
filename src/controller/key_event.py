@@ -3,6 +3,7 @@ from src.controller.gen_date import gen_date
 from src.controller.key_event_uptade_task import update_key_event
 from src.controller.task import Task, Read, Delete, GetAll
 from src.view.task_view import create_task, print_task, input_update_task, alert, print_all_task
+from src.view.messages import default_messages, alert_messages
 
 
 def key_event(key):
@@ -13,7 +14,7 @@ def key_event(key):
         date_modified = gen_date()
         task = Task(uuid, title, description, user_name, date, date_modified)
         task.set_task()
-        print("______________________")
+        print(default_messages['4'])
 
     def read():
         read_task = Read()
@@ -29,15 +30,16 @@ def key_event(key):
         delete_task = Delete()
         delete_task.uid = input_task()
         delete_task.del_self()
-        alert("Tarea Eliminada")
+        alert(alert_messages['1'])
 
     def get_all():
         get_all_task = GetAll()
         response = get_all_task.get_all()
         print_all_task(response)
 
-    def error():
-        print("Errorrrrrrrr")
+    def exit_todo_list():
+        print(alert_messages['2'])
+        exit()
 
     switch_key = {
         1: create,
@@ -45,5 +47,6 @@ def key_event(key):
         3: update,
         4: delete,
         5: get_all,
+        6: exit_todo_list
     }
-    switch_key.get(key, error)()
+    switch_key.get(key)()

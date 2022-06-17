@@ -1,8 +1,11 @@
+from src.view.messages import default_messages, describe_task_messages
+
+
 def create_task():
-    print("Para crear la tarea ingresa la siguiente información: ")
-    title = input("Titulo: ")
-    description = input("Descripción: ")
-    user_name = input("Usuario: ")
+    print(default_messages['5'])
+    title = input(describe_task_messages['1'])
+    description = input(describe_task_messages['2'])
+    user_name = input(describe_task_messages['3'])
 
     return title, description, user_name
 
@@ -56,15 +59,3 @@ def print_all_task(value):
             print(list_fields, ": ", list_details)
 
         print("_________________________________\n")
-
-
-
-
-
-
-
-
-
-
-
-

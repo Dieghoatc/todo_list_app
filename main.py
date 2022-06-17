@@ -1,7 +1,8 @@
 from src import init
+from src.view.messages import default_messages
 
 if __name__ == '__main__':
-    init("\n\nBienvenido \n")
+    init("\n\n" + default_messages['1'] + "\n")
 
 """
 Clase y Objeto
